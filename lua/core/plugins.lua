@@ -24,6 +24,13 @@ return require('packer').startup(function(use)
     ta = '0.1.0',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+  use {
+    'goolord/alpha-nvim',
+    requires = { 'nvim-tree/nvim-web-devicons' },
+    config = function ()
+        require'alpha'.setup(require'alpha.themes.dashboard'.config)
+    end
+  }
   -- My plugins here
   -- use 'foo1/bar1.nvim'
   -- use 'foo2/bar2.nvim'
